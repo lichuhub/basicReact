@@ -1,0 +1,46 @@
+query FilterbyName {
+ engagements(first: 2, filter: { name: { contains: "Engagement" } })
+  {
+    items {
+    endDate
+    id
+    internalName
+    lastApprovedDate
+    lastModifiedDate
+    name
+    status
+    }
+      hasNextPage
+    endCursor
+  }
+}
+
+query getByID {
+  engagement_by_pk(id:"ca2142f1-73f8-4fa5-8cb1-cc22dffda9d2") {
+    endDate
+    id
+    internalName
+    lastApprovedDate
+    lastModifiedDate
+    name
+    status
+  }
+}
+
+query getAll {
+  engagements {
+    endCursor
+    hasNextPage
+    items {
+      endDate
+      id
+      internalName
+      lastApprovedDate
+      lastModifiedDate
+      name
+      programName
+      startDate
+      status
+    }
+  }
+}

@@ -1,0 +1,11 @@
+type Engagement @model {
+  id: ID!
+  name: String!
+  internalName: String
+  status: String!
+  programName: String
+  startDate: String
+  endDate: String
+  lastModifiedDate: String
+  lastApprovedDate: String
+}
