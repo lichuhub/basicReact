@@ -44,3 +44,15 @@ query getAll {
     }
   }
 }
+
+mutation UpdateInternalName {
+  patchEngagement(
+    id: "2df9cf31-a915-4c4f-bad4-321954471d25"
+    item: { internalName: "test"}
+    _partitionKeyValue: "2df9cf31-a915-4c4f-bad4-321954471d25"
+  ) {
+    id
+    internalName
+    name
+  }
+}
