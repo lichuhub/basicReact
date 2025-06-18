@@ -18,20 +18,28 @@
     "graphql": {
       "enabled": true,
       "path": "/graphql",
-      "allow-introspection": true
+      "allow-introspection": true,
+      "depth-limit": 5
     },
     "host": {
       "cors": {
-        "origins": ["http://localhost:5173/", "http://localhost:4280"],
+        "origins": [
+          "http://localhost:5173/",
+          "http://localhost:4280"
+        ],
         "allow-credentials": false
       },
       "authentication": {
         "provider": "StaticWebApps"
       },
       "mode": "production"
+    },
+    "pagination": {
+      "max-page-size": 1000,
+      "default-page-size": 100
     }
   },
-    "entities": {
+  "entities": {
     "Engagement": {
       "source": {
         "object": "engagements"
