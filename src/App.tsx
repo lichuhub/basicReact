@@ -10,12 +10,11 @@ function App() {
   const GetEngagements = gql`
   query GetEngagements {
     engagements {
+      endCursor
+      hasNextPage
       items {
         endDate
         id
-        internalName
-        lastApprovedDate
-        lastModifiedDate
         name
         programName
         startDate
