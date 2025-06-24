@@ -10,13 +10,21 @@ type Engagement @model {
   currency: String
   lastModifiedDate: String
   lastApprovedDate: String
-  summaries: [Summary]
+  talks: [ConferenceTalk]
 }
 
-type Summary {
+type ConferenceTalk {
   id: String
-  name: String
-  description: String
-  startDate: String
-  endDate: String
+  title: String
+  abstract: String
+  mainTag: String
+  talkTime: String
+  talkLength: Int
+  tags: [String]
+}
+
+type Talk @model {
+  id: String
+  title: String
+  mainTag: String
 }
